@@ -1,0 +1,823 @@
+                /*=============== GOOGLE FONTS ===============*/
+                
+                @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+                /*=============== VARIABLES CSS ===============*/
+                
+                 :root {
+                    --header-height: 3.5rem;
+                    /*========== Colors ==========*/
+                    --hue: 230;
+                    --first-hue: 250;
+                    --second-hue: 219;
+                    --sat: 66%;
+                    --lig: 75%;
+                    --first-color: hsl(225, 85%, 52%);
+                    --first-color-alt: hsl(225, 100%, 60%);
+                    /* -4% */
+                    --button-color: hsl(0, 0%, 17%);
+                    --button-color-alt: hsl(0, 0%, 21%);
+                    --gradient-color: linear-gradient(90deg, hsl(23, 4%, 28%) 0%, hsl(23, 4%, 8%) 100%);
+                    --gradient-color3: linear-gradient(90deg, hsl(23, 4%, 8%) 0%, hsl(23, 4%, 28%) 100%);
+                    /* --title-color: hsl(0, 0%, 15%); */
+                    --gradient-color2: linear-gradient(90deg, hsl(40.44deg 89.39% 19.48%) 0%, hsl(0deg 0% 35.5%) 100%);
+                    --title-color: hsl(0deg 0% 69.62%);
+                    --text-color: hsl(0, 0%, 35%);
+                    --text-color-light: hsl(0, 0%, 55%);
+                    /* --body-color: hsl(0, 2%, 9%); */
+                    --body-color: hsl(0deg 0% 0%);
+                    --container-color: #fff;
+                    --white-color: hsl(0, 0%, 100%);
+                    --border-color: hsl(0, 0%, 94%);
+                    --ant-success-color: rgba(255, 255, 255, 0.1);
+                    --ant-primary-color: rgb(18, 18, 18);
+                    /* --ant-success-color: rgba(255, 255, 255, 0.1); */
+                    --shadow-img: drop-shadow(0 12px 24px hsla(0, 0%, 0%, .4));
+                    --shadow-circle: 0 12px 24px hsla(0, 0%, 0%, .4);
+                    --shadow-button: 0 -4px 8px hsla(0, 0%, 0%, .3);
+                    --shadow-card: 0 -8px 24px hsla(0, 0%, 0%, .3);
+                    --shadow-text: 0 2px 4px var(--first-color-darken);
+                    /*========== Font and typography ==========*/
+                    --body-font: "Montserrat", sans-serif;
+                    --second-font: "Inter", sans-serif;
+                    --biggest-font-size: 3rem;
+                    --bigger-font-size: 2rem;
+                    --big-font-size: 2rem;
+                    --h1-font-size: 1.5rem;
+                    --h2-font-size: 1.25rem;
+                    --h3-font-size: 1rem;
+                    --normal-font-size: .938rem;
+                    --small-font-size: .813rem;
+                    /* --loading-font-size: 2rem; */
+                    --normal-font-size: .938rem;
+                    --small-font-size: .813rem;
+                    --smaller-font-size: .75rem;
+                    --tiny-font-size: .625rem;
+                    /*========== Font weight ==========*/
+                    --font-medium: 500;
+                    --font-bold: 700;
+                    /*========== Margenes Bottom ==========*/
+                    --mb-0-5: .5rem;
+                    --mb-0-75: .75rem;
+                    --mb-1: 1rem;
+                    --mb-1-5: 1.5rem;
+                    --mb-2: 2rem;
+                    --mb-2-5: 2.5rem;
+                    --mb-3: 2rem;
+                    /*========== z index ==========*/
+                    --z-tooltip: 10;
+                    --z-fixed: 100;
+                }
+                
+                @media screen and (min-width: 768px) {
+                     :root {
+                        --h6-font-size: 1.7rem;
+                    }
+                }
+                
+                @media screen and (min-width: 1150px) {
+                     :root {
+                        --big-font-size: 3.5rem;
+                        --biggest-font-size: 5rem;
+                        --bigger-font-size: 3rem;
+                        --h1-font-size: 2.25rem;
+                        --h2-font-size: 1.5rem;
+                        --h3-font-size: 1.25rem;
+                        --normal-font-size: 1rem;
+                        --small-font-size: .875rem;
+                    }
+                }
+                /*========== Variables Dark theme ==========*/
+                
+                body.dark-theme {
+                    --first-color: #b4862c;
+                    --button-color: hsl(0, 0%, 17%);
+                    --button-color-alt: hsl(0, 0%, 21%);
+                    --gradient-color: linear-gradient(90deg, hsl(23, 4%, 28%) 0%, hsl(23, 4%, 8%) 100%);
+                    /* --title-color: hsl(0, 0%, 15%); */
+                    --gradient-color2: linear-gradient(90deg, hsl(40.44deg 90.95% 60.98%) 0%, hsl(23deg 51.59% 92.91%) 100%);
+                    --title-color: hsl(0, 0%, 0%);
+                    --text-color: hsl(0, 0%, 35%);
+                    --text-color-light: hsl(0, 0%, 55%);
+                    /* --body-color: hsl(0, 2%, 9%); */
+                    --body-color: hsl(0, 0%, 99%);
+                    --container-color: #fff;
+                    --white-color: hsl(0, 0%, 100%);
+                    --border-color: hsl(0, 0%, 94%);
+                    --ant-success-color: rgba(255, 255, 255, 0.1);
+                    --ant-primary-color: rgb(18, 18, 18);
+                    /* --ant-success-color: rgba(255, 255, 255, 0.1); */
+                    --shadow-img: drop-shadow(0 12px 24px hsla(0, 0%, 0%, .4));
+                    --shadow-circle: 0 12px 24px hsla(0, 0%, 0%, .4);
+                    --shadow-button: 0 -4px 8px hsla(0, 0%, 0%, .3);
+                    --shadow-card: 0 -8px 24px hsla(0, 0%, 0%, .3);
+                    --shadow-text: 0 2px 4px var(--first-color-darken);
+                }
+                /*=============== BASE ===============*/
+                
+                * {
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                html {
+                    scroll-behavior: smooth;
+                }
+                
+                body {
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/personal4.webp);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    /* background-attachment: fixed; */
+                    background-position: center;
+                    color: #333;
+                    /* direction: rtl; */
+                    display: flex;
+                    /* استخدام flexbox */
+                    align-items: center;
+                    /* محاذاة عمودية في المنتصف */
+                    justify-content: center;
+                    /* محاذاة أفقية في المنتصف */
+                    height: 137vh;
+                }
+                
+                h1,
+                h2,
+                h3,
+                h4 {
+                    color: var(--title-color);
+                    font-family: var(--second-font);
+                    font-weight: var(--font-regular);
+                }
+                
+                ul {
+                    list-style: none;
+                }
+                
+                a {
+                    text-decoration: none;
+                }
+                
+                img {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+                /*=============== REUSABLE CSS CLASSES ===============*/
+                
+                .container {
+                    max-width: 1120px;
+                    margin-inline: 1.5rem;
+                }
+                
+                .containercard {
+                    max-width: 1024px;
+                    margin-left: var(--mb-1-5);
+                    margin-right: var(--mb-1-5);
+                }
+                
+                .grid {
+                    display: grid;
+                    gap: 1.5rem;
+                }
+                
+                .section {
+                    padding-block: 5rem 1rem;
+                }
+                
+                .section__title {
+                    font-size: var(--bigger-font-size);
+                    font-family: var(--second-font);
+                    margin-bottom: 1.5rem;
+                    text-align: center;
+                    color: var(--white-color);
+                }
+                
+                .section__title-center {
+                    font-size: var(--h2-font-size);
+                    margin-bottom: var(--mb-2);
+                    line-height: 140%;
+                    text-align: center;
+                }
+                
+                .section__subtitle {
+                    display: block;
+                    text-align: center;
+                    font-size: var(--small-font-size);
+                    margin-bottom: var(--mb-3);
+                }
+                
+                .main {
+                    overflow: hidden;
+                    /* For animation ScrollReveal */
+                    /* position: relative; */
+                }
+                
+                .snowflake {
+                    position: absolute;
+                    top: -10px;
+                    color: #fff;
+                    font-size: 16px;
+                    user-select: none;
+                    pointer-events: none;
+                }
+                /*=============== HEADER ===============*/
+                
+                .bd-grid {
+                    max-width: 1024px;
+                    display: -ms-grid;
+                    display: grid;
+                    -ms-grid-columns: 100%;
+                    grid-template-columns: 100%;
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                }
+                /*===== HEADER =====*/
+                
+                .header {
+                    /* box-shadow: 1px 5px 4px rgb(0 0 0); */
+                    width: 100%;
+                    height: var(--header-height);
+                    position: fixed;
+                    top: -2px;
+                    left: 0;
+                    padding: 0 1.5rem;
+                    background-color: transparent;
+                    /* background-color: #1f1f1fde; */
+                    z-index: var(--z-fixed);
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+                
+                .header-shadow {
+                    box-shadow: 1px 5px 4px rgb(0 0 0 / 0.4);
+                }
+                
+                .header__logo {
+                    color: var(--white-color);
+                }
+                
+                .header__toggle {
+                    font-size: 1.7rem;
+                    color: var(--first-color);
+                    cursor: pointer;
+                }
+                /*===== NAV =====*/
+                
+                @media screen and (max-width: 768px) {
+                    .nav {
+                        position: fixed;
+                        top: 0;
+                        left: -100%;
+                        background-color: hsl(231, 40%, 10%);
+                        color: var(--white-color);
+                        width: 100%;
+                        height: 100vh;
+                        padding: 1.5rem 0;
+                        z-index: var(--z-fixed);
+                        -webkit-transition: .5s;
+                        transition: .5s;
+                    }
+                }
+                
+                .nav__content {
+                    height: 100%;
+                    -ms-grid-rows: max-content 1fr max-content;
+                    grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+                    /* grid-template-rows: max-content 1fr max-content;
+    row-gap: 2rem; */
+                }
+                
+                .nav__close {
+                    position: absolute;
+                    right: 1.5rem;
+                    font-size: 1.3rem;
+                    padding: 0.25rem;
+                    background-color: #02a2f1;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+                
+                .nav__img {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    padding-top: 0.25rem;
+                    margin-bottom: 0.8rem;
+                    width: 100%;
+                    height: 100%;
+                    /* background-color: var(--first-color); */
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+                
+                .nav__img img {
+                    width: 200px;
+                }
+                
+                .nav__name {
+                    display: block;
+                    color: var(--white-color);
+                }
+                
+                .nav__profesion {
+                    font-size: var(--small-font-size);
+                }
+                
+                .nav__menu {
+                    justify-content: center;
+                    display: flex;
+                    -ms-flex-item-align: center;
+                    -ms-grid-row-align: center;
+                    align-self: center;
+                }
+                
+                .nav__item {
+                    margin: 2.5rem 0;
+                }
+                
+                .nav__link {
+                    color: var(--black-color);
+                }
+                
+                .nav__social {
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 2rem;
+                }
+                
+                .nav__perfil {
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .nav__social-icon {
+                    font-size: 1.3rem;
+                    color: var(--black-color);
+                    margin-right: 1rem;
+                }
+                
+                .nav__social-icon2 {
+                    font-size: 1.5rem;
+                    color: var(--first-color);
+                    margin-right: 1rem;
+                    cursor: pointer;
+                }
+                
+                .nav__social-icon2:hover {
+                    color: var(--first-color);
+                }
+                
+                .nav__social-icon:hover {
+                    color: var(--first-color);
+                }
+                /*Aparecer menu*/
+                
+                .show {
+                    left: 0;
+                }
+                /*Active menu*/
+                
+                .active {
+                    color: var(--first-color);
+                }
+                /*===== MEDIA QUERIES =====*/
+                
+                @media screen and (min-width: 768px) {
+                    body {
+                        margin: 0;
+                    }
+                    .header {
+                        height: calc(var(--header-height) + 1rem);
+                    }
+                    .header__logo,
+                    .header__toggle {
+                        display: none;
+                    }
+                    .nav {
+                        width: 100%;
+                    }
+                    .nav__content {
+                        display: -ms-grid;
+                        display: grid;
+                        -ms-grid-columns: (max-content)[3];
+                        grid-template-columns: repeat(3, max-content);
+                        -ms-grid-rows: 1fr;
+                        grid-template-rows: 1fr;
+                        -ms-column-gap: 1rem;
+                        column-gap: 1rem;
+                        -ms-box-pack: justify;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                    }
+                    .nav__close,
+                    .nav__profesion {
+                        display: none;
+                    }
+                    .nav__perfil {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+                    .nav__img {
+                        width: 100%;
+                        height: 100%;
+                        margin-right: 0.5rem;
+                        margin-bottom: 0;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+                    .nav__img img {
+                        width: 127px;
+                    }
+                    .nav__list {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                    }
+                    .nav__item {
+                        margin: 0 .25rem;
+                    }
+                    .nav__link {
+                        padding: .5rem .8rem;
+                        border-radius: .25rem;
+                    }
+                    .nav__link:hover {
+                        background-color: var(--first-color);
+                    }
+                    .active {
+                        background-color: var(--first-color);
+                        color: var(--white-color);
+                    }
+                }
+                
+                @media screen and (min-width: 1024px) {
+                    .bd-grid {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                /* Show list */
+                
+                .show-list,
+                .show-list li {
+                    transform: translateY(0);
+                }
+                /* Rotate icon */
+                
+                .rotate-icon {
+                    transform: rotate(135deg);
+                }
+                
+                .active-link {
+                    background: linear-gradient(180deg, hsla(var(--first-hue), var(--sat), var(--lig), 1), hsla(var(--first-hue), var(--sat), var(--lig, .2)));
+                    box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), .4);
+                }
+                
+                .scroll-header {
+                    background-color: var(--body-color);
+                    box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
+                }
+                
+                .calc2 {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    /* background-color: #fff; */
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    text-align: center;
+                    background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgb(4 9 30 / 50%)), url(../img/logo\ \(2\).png);
+                    background-size: cover;
+                    /* background-attachment: fixed; */
+                    background-position: center;
+                }
+                
+                h1 {
+                    font-size: 24px;
+                    color: #ffffff;
+                    margin-bottom: 20px;
+                }
+                
+                .somebutton {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+                
+                .somebutton button {
+                    background-color: var(--first-color);
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+                
+                .somebutton button:hover {
+                    background-color: black;
+                    color: white;
+                }
+                
+                .calculator {
+                    display: none;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                
+                .testo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .calculator p {
+                    font-size: 16px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                
+                .calculator input[type="text"] {
+                    width: 148px;
+                    padding: 5px;
+                    font-size: 16px;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    background-color: #000000;
+                    margin-left: 5px;
+                    padding: 1rem;
+                    color: white;
+                }
+                
+                .calculator h2 {
+                    font-size: 20px;
+                    color: #ffffff;
+                    margin-bottom: 10px;
+                }
+                
+                label {
+                    font-size: 16px;
+                    display: none;
+                    margin: 10px 0 5px;
+                }
+                
+                input,
+                select {
+                    appearance: none;
+                    background-color: #f9f9f9;
+                    color: #000000;
+                    border: 2px solid #eba81d;
+                    border-radius: 8px;
+                    padding: 12px 15px;
+                    font-size: 16px;
+                    width: 100%;
+                    max-width: 400px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+                    position: relative;
+                    text-align: center;
+                    padding-right: 30px;
+                    margin-top: 15px;
+                    /* مساحة للسهم */
+                }
+                /* السهم بجانب العنصر */
+                
+                select::after {
+                    content: "▼";
+                    /* رمز السهم */
+                    position: absolute;
+                    right: 10px;
+                    /* المسافة من اليمين */
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 14px;
+                    color: #27ae60;
+                    pointer-events: none;
+                    /* منع السهم من التفاعل */
+                }
+                
+                .nun {
+                    width: 65%;
+                }
+                
+                select {
+                    -webkit-appearance: none;
+                    /* لإزالة السهم الافتراضي على المتصفحات مثل Chrome وSafari */
+                    -moz-appearance: none;
+                    /* لإزالة السهم الافتراضي على Firefox */
+                    appearance: none;
+                    background-color: #f9f9f9;
+                    color: #2c3e50;
+                    border: 2px solid #3498db;
+                    border-radius: 8px;
+                    padding: 12px 15px;
+                    font-size: 16px;
+                    width: 100%;
+                    max-width: 400px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                    padding-left: 30px;
+                    /* إضافة مساحة للسهم على اليسار */
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2327ae60'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-position: left 10px center;
+                    /* موضع السهم على اليسار */
+                    background-size: 16px;
+                }
+                
+                select:focus {
+                    border-color: #2ecc71;
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                    outline: none;
+                }
+                
+                button {
+                    background-color: var(--first-color);
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+                
+                button:hover {
+                    background-color: black;
+                    color: white;
+                }
+                
+                p {
+                    font-size: 16px;
+                    margin-top: 10px;
+                    color: #ffffff;
+                }
+                /* تنسيق عنصر select */
+                
+                #replacementFoodVegetables,
+                #originalFoodVegetables,
+                #originalFoodProtein,
+                #replacementFoodProtein,
+                #originalFoodCarbohydrate,
+                #replacementFoodCarbohydrate,
+                #originalFoodHealthyFats,
+                #replacementFoodHealthyFats,
+                #originalFoodFruits,
+                #replacementFoodFruits,
+                #originalFoodDairy,
+                #replacementFoodDairy,
+                #originalFoodLegumes,
+                #replacementFoodLegumes,
+                #originalFoodSnack,
+                #replacementFoodSnack {
+                    background-color: #000000;
+                    color: white;
+                    border: 2px solid var(--first-color-alt);
+                    /* لون الحدود أخضر غامق */
+                    border-radius: 8px;
+                    /* زوايا مستديرة أكثر */
+                    padding: 12px 15px;
+                    /* حشوة أكبر */
+                    font-size: 16px;
+                    /* حجم الخط */
+                    width: 100%;
+                    /* عرض كامل */
+                    max-width: 400px;
+                    /* أقصى عرض للعنصر */
+                    cursor: pointer;
+                    /* تغيير شكل المؤشر عند التمرير */
+                    appearance: none;
+                    /* إخفاء السهم الافتراضي */
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                    /* ظل خفيف */
+                    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+                    /* تأثير سلس */
+                    position: relative;
+                    /* لتنسيق السهم المخصص */
+                }
+                /* إضافة تأثير عند التفاعل */
+                
+                #replacementFoodVegetables:focus {
+                    border-color: #2ecc71;
+                    /* تغيير لون الحدود عند التركيز */
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                    /* زيادة الظل */
+                    outline: none;
+                    /* إزالة الإطار الافتراضي */
+                }
+                /* تنسيق السهم المخصص */
+                
+                #replacementFoodVegetables::after {
+                    content: "▼";
+                    /* رمز السهم */
+                    position: absolute;
+                    /* تموضع السهم */
+                    right: 15px;
+                    /* المسافة من اليمين */
+                    top: 50%;
+                    /* تموضعه في المنتصف عموديًا */
+                    transform: translateY(-50%);
+                    /* نقل السهم لأعلى */
+                    font-size: 14px;
+                    /* حجم الخط للسهم */
+                    color: #27ae60;
+                    /* لون السهم */
+                    pointer-events: none;
+                    color: red;
+                    /* منع السهم من التفاعل */
+                }
+                /* تنسيق خيارات القائمة */
+                
+                #replacementFoodVegetables option {
+                    background-color: #ffffff;
+                    /* لون الخلفية */
+                    color: #2c3e50;
+                    /* لون النص */
+                    padding: 10px;
+                    /* حشوة داخلية */
+                    font-size: 16px;
+                    /* حجم الخط */
+                }
+                /* تحسين قابلية الاستخدام على الأجهزة المحمولة */
+                
+                @media (max-width: 600px) {
+                    #replacementFoodVegetables {
+                        font-size: 14px;
+                        /* تقليل حجم الخط للأجهزة الصغيرة */
+                        padding: 10px;
+                        /* تقليل الحشوة */
+                    }
+                    #replacementFoodVegetables::after {
+                        font-size: 12px;
+                        /* تقليل حجم السهم */
+                    }
+                }
+                
+                @media screen and (max-width:320px) {
+                    .container {
+                        margin-inline: 1rem;
+                    }
+                    .section {
+                        padding-block: 4rem 1rem;
+                    }
+                    .nav__menu {
+                        padding: 1rem 1.5rem;
+                    }
+                }
+                
+                @media screen and (min-width: 450px) {
+                    .nav {
+                        width: 350px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    @media screen and (min-width: 576px) {
+                        .nav__menu {
+                            width: 328px;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                        }
+                    }
+                    @media screen and (min-width:1150px) {
+                        .container {
+                            margin-inline: auto;
+                        }
+                        .section {
+                            padding-block: 7rem 2rem;
+                        }
+                    }
+                    .nav__logo {
+                        font-size: var(--h3-font-size);
+                    }
+                }
+                
+                @media screen and (min-width: 992px) {
+                    .navtotal {
+                        height: calc(var(--header-height) + 1rem);
+                    }
+                }
